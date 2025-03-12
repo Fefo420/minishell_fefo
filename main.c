@@ -6,7 +6,7 @@
 /*   By: fileonar <fileonar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/06 18:13:02 by julcalde          #+#    #+#             */
-/*   Updated: 2025/03/12 11:46:23 by fileonar         ###   ########.fr       */
+/*   Updated: 2025/03/12 12:31:12 by fileonar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,9 +15,10 @@
 #include <readline/history.h>
 
 
-void check_for_commands(char	*input)
+char *check_for_commands(char	*input)
 {
 	char *echo_history;
+
 	if (input)
 	{
 		if (ft_strncmp(input, "echo", 4) == 0)
@@ -27,22 +28,29 @@ void check_for_commands(char	*input)
 			//print the rest of the input
 			ft_putstr_fd(input, 1);
 			ft_putstr_fd("\n", 1);
+			echo_history = ft_strjoin("echo ", input);
+			//add the input to the history
+			return (echo_history);
 		}
-		echo_history = ft_strjoin("echo ", input);
-		//add the input to the history
-		add_history(echo_history);
+		else if (ft_strncmp(input, "clear", 5) == 0)
+		{
+			//clear the screen
+			rl_clear_history();
+			return (input);
+		}
+
 	}
+	return (input);
 }
 
-int	main(int argc, char **argv)
+int	main(void)
 {
 	//get usename, print it and use it as prompt
 	char *user;
 	char *prompt;
 	char *input;
+	char *history;
 
-	(void)argc;
-	(void)argv;
 	//The getenv function is used to retrieve the value of an environment variable.
 	user = getenv("USER");
 	if (!user)
@@ -52,7 +60,8 @@ int	main(int argc, char **argv)
 		prompt = ft_strjoin(user, "_minishell$ ");
 		input = readline(prompt);
 		//start building echo
-		check_for_commands(input);
+		history = check_for_commands(input);
+		add_history(history);
 	}
 	return (0);
 }

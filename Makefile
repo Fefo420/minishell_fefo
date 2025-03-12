@@ -12,7 +12,7 @@ OBJS = $(SRCS:.c=.o)
 # CFLAGS: These are the flags used during the compilation of source files to object files.
 # LINKFLAGS: These are the flags used during the linking stage to create the final executable.
 CC = gcc
-CFLAGS = -Wall -Wextra -Werror 
+CFLAGS = -Wall -Wextra -Werror -g
 LINKFLAGS = -lreadline
 
 all: $(LIBFT) $(NAME)

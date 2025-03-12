@@ -6,7 +6,7 @@
 /*   By: fileonar <fileonar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/06 18:08:50 by julcalde          #+#    #+#             */
-/*   Updated: 2025/03/12 11:36:32 by fileonar         ###   ########.fr       */
+/*   Updated: 2025/03/12 12:29:15 by fileonar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,6 +42,8 @@
 // 								// tputs
 // # include <sys/ioctl.h>         // ioctl
 // # include <stdlib.h>            // getenv
+
+//STRUCTS
 
 
 #endif
