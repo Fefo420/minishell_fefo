@@ -6,7 +6,7 @@
 /*   By: fileonar <fileonar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/06 18:08:50 by julcalde          #+#    #+#             */
-/*   Updated: 2025/03/12 12:29:15 by fileonar         ###   ########.fr       */
+/*   Updated: 2025/03/12 17:13:42 by fileonar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@
 // rl_replace_line, rl_redisplay, add_history
 
 // LOCAL LIBRARIES
-# include "libft/libft.h"
+# include "libft_fefo/libft.h"
 
 # include <stdio.h>             // printf
 # include <stdlib.h>            // malloc, free, exit

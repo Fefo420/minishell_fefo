@@ -2,9 +2,8 @@ NAME = minishell
 
 HEADER = minishell.h
 
-LIBFT_DIR = ./libft
+LIBFT_DIR = ./libft_fefo
 LIBFT = $(LIBFT_DIR)/libft.a
-INCLUDES = -I $(LIBFT_DIR)
 
 SRCS = main.c
 OBJS = $(SRCS:.c=.o)
@@ -18,7 +17,8 @@ LINKFLAGS = -lreadline
 all: $(LIBFT) $(NAME)
 
 $(LIBFT):
-	@make -C $(LIBFT_DIR) all;
+	@git submodule update --init $(LIBFT_DIR)
+	@make -C $(LIBFT_DIR) all
 
 $(NAME): $(OBJS)
 	$(CC) $(CFLAGS) -o $(NAME) $(OBJS) $(LIBFT) $(INCLUDES) $(LINKFLAGS)
