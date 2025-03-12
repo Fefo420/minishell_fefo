@@ -6,7 +6,7 @@
 /*   By: fileonar <fileonar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/06 18:08:50 by julcalde          #+#    #+#             */
-/*   Updated: 2025/03/12 11:13:26 by fileonar         ###   ########.fr       */
+/*   Updated: 2025/03/12 11:36:32 by fileonar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,11 @@
 
 // # include <readline/readline.h> // readline
 // # include <readline/history.h>  // rl_clear_history, rl_on_new_line,
-								// rl_replace_line, rl_redisplay, add_history
+// rl_replace_line, rl_redisplay, add_history
+
+// LOCAL LIBRARIES
+# include "libft/libft.h"
+
 # include <stdio.h>             // printf
 # include <stdlib.h>            // malloc, free, exit
 # include <unistd.h>            // write, access, fork, getcwd, chdir, unlink,
@@ -39,6 +43,5 @@
 // # include <sys/ioctl.h>         // ioctl
 // # include <stdlib.h>            // getenv
 
-# include "libft/libft.h"
 
 #endif
